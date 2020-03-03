@@ -1,5 +1,7 @@
 package tam.step.plannerback.service.priority.impls;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import tam.step.plannerback.model.Priority;
 import tam.step.plannerback.dao.priority.interfaces.IPriorityDAO;
@@ -8,13 +10,21 @@ import java.util.List;
 
 @Service
 public class PriorityServiceImpl implements IPriorityDAO {
+
+    private final IPriorityDAO iPriorityDAO;
+
+    @Autowired
+    public PriorityServiceImpl(@Qualifier("mongo") IPriorityDAO iPriorityDAO) {
+        this.iPriorityDAO = iPriorityDAO;
+    }
+
     @Override
     public Priority create(Priority priority) {
         return null;
     }
 
     @Override
-    public Priority get(Long id) {
+    public Priority get(Integer id) {
         return null;
     }
 
@@ -24,12 +34,12 @@ public class PriorityServiceImpl implements IPriorityDAO {
     }
 
     @Override
-    public Priority delete(Long id) {
+    public Priority delete(Integer id) {
         return null;
     }
 
     @Override
     public List<Priority> getAll() {
-        return null;
+        return iPriorityDAO.getAll();
     }
 }

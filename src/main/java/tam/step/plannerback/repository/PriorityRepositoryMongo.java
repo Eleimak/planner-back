@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import tam.step.plannerback.model.Priority;
 
 @Repository
-public interface PriorityRepositoryMongo extends MongoRepository<Priority, Long> {
+public interface PriorityRepositoryMongo extends MongoRepository<Priority, Integer> {
 }
