@@ -20,22 +20,22 @@ public class PriorityServiceImpl implements IPriorityDAO {
 
     @Override
     public Priority create(Priority priority) {
-        return null;
+        return iPriorityDAO.create(priority);
     }
 
     @Override
     public Priority get(Integer id) {
-        return null;
+        return iPriorityDAO.get(id);
     }
 
     @Override
     public Priority update(Priority priority) {
-        return null;
+        return iPriorityDAO.update(priority);
     }
 
     @Override
     public Priority delete(Integer id) {
-        return null;
+        return iPriorityDAO.delete(id);
     }
 
     @Override
