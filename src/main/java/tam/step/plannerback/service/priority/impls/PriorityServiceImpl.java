@@ -5,11 +5,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import tam.step.plannerback.model.Priority;
 import tam.step.plannerback.dao.priority.interfaces.IPriorityDAO;
+import tam.step.plannerback.service.priority.interfaces.IPriorityService;
 
 import java.util.List;
 
 @Service
-public class PriorityServiceImpl implements IPriorityDAO {
+public class PriorityServiceImpl implements IPriorityService {
 
     private final IPriorityDAO iPriorityDAO;
 

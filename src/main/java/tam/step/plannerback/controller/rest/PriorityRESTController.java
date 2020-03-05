@@ -3,7 +3,6 @@ package tam.step.plannerback.controller.rest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tam.step.plannerback.model.Priority;
-import tam.step.plannerback.dao.priority.interfaces.IPriorityDAO;
 import tam.step.plannerback.service.priority.impls.PriorityServiceImpl;
 
 import java.util.List;
